@@ -5,7 +5,9 @@ VisualStudioVersion = 16.0.29519.181
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BlazorComponents", "BlazorComponents\BlazorComponents.csproj", "{15A45DAC-5AB6-4297-8A06-170551A5DEA9}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BlazorServer", "BlazorServer\BlazorServer.csproj", "{456B7D16-8048-482E-9D96-FD0A23B42567}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BlazorServer", "BlazorServer\BlazorServer.csproj", "{456B7D16-8048-482E-9D96-FD0A23B42567}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SQLiteEx", "SQLiteEx\SQLiteEx.csproj", "{EDCE6E91-A39E-41AB-B769-098794ED6F44}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +23,10 @@ Global
 		{456B7D16-8048-482E-9D96-FD0A23B42567}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{456B7D16-8048-482E-9D96-FD0A23B42567}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{456B7D16-8048-482E-9D96-FD0A23B42567}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EDCE6E91-A39E-41AB-B769-098794ED6F44}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EDCE6E91-A39E-41AB-B769-098794ED6F44}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EDCE6E91-A39E-41AB-B769-098794ED6F44}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EDCE6E91-A39E-41AB-B769-098794ED6F44}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -1,0 +1,56 @@
+﻿@page "/emplist"
+
+<h1 class="page-title">All employees</h1>
+<NavLink href="addemployee" class="btn btn-primary table-btn">
+ Add New Employee
+</NavLink>
+@if (Employees == null)
+{
+    <p><em>Loading...</em></p>
+}
+else
+{
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Employee ID</th>
+                <th>Name</th>
+                <th>Designation</th>
+                <th>Department</th>
+                <th>Qualification</th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var employee in Employees)
+            {
+                <tr>
+                    <td>@employee.EmpId</td>
+                    <td>@employee.EmpName</td>
+                    <td>@employee.Designation</td>
+                    <td>@employee.Department</td>
+                    <td>@employee.Qualification</td>
+                    <td>
+                        <NavLink href="@($"employeedetail/{employee.EmpId}")" class="btn btn-primary table-btn">
+                            <i class="fas fa-info-circle"></i>
+                        </NavLink>
+                        <NavLink href="@($"employeeedit/{employee.EmpId}")" class="btn btn-primary table-btn">
+                            <i class="fas fa-edit"></i>
+                        </NavLink>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}
+
+
+@code {
+    public List<Employee> Employees { get; set; }
+    protected override void OnInitialized()
+    {
+        var vEmpDataAccess = new EmpDataAccess();
+        Employees = vEmpDataAccess.GetAllEmployees();
+    }
+
+}

@@ -1,0 +1,47 @@
+﻿@page "/addemployee"
+<h3>Add Employee</h3>
+
+<EditForm Model="@Employee" OnValidSubmit="@HandleValidSubmit">
+    <DataAnnotationsValidator />
+    <ValidationSummary />
+
+    <div class="form-group">
+        <label for="Name">Name: </label>
+        <InputText id="Name" class="form-control" @bind-Value="@Employee.EmpName" placeholder="Enter  name"></InputText>
+        <ValidationMessage For="@(() => Employee.EmpName)" />
+    </div>
+
+    <div class="form-group">
+        <label for="firstName">First name: </label>
+        <InputText id="firstName" class="form-control" @bind-Value="@Employee.Designation" placeholder="Enter Designation"></InputText>
+        <ValidationMessage For="@(() => Employee.Designation)" />
+    </div>
+    <div class="form-group">
+        <label for="firstName">First name: </label>
+        <InputText id="firstName" class="form-control" @bind-Value="@Employee.Department" placeholder="Enter Department"></InputText>
+        <ValidationMessage For="@(() => Employee.Department)" />
+    </div>
+    <div class="form-group">
+        <label for="firstName">First name: </label>
+        <InputText id="firstName" class="form-control" @bind-Value="@Employee.Qualification" placeholder="Enter Qualification"></InputText>
+        <ValidationMessage For="@(() => Employee.Qualification)" />
+    </div>
+
+    <button type="submit" class="btn btn-primary">Save employee</button>
+   <label>@SuccMessage </label>
+</EditForm>
+
+@code {
+    public string SuccMessage = "";
+    public Employee Employee { get; set; } = new Employee();
+    protected void HandleValidSubmit()
+    {
+        var vEmpDataAccess = new EmpDataAccess();
+        vEmpDataAccess.SaveEmployee(Employee);
+        SuccMessage = "Data Saved";
+    }
+    public void Close()
+    {
+        StateHasChanged();
+    }
+}

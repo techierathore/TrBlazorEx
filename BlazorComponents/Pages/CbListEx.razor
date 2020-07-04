@@ -1,0 +1,22 @@
+﻿@page "/CbListEx"
+@inherits CbListExBase
+    <div class="col-12">
+        <h3><b>CheckBox List Example </b></h3>
+        <hr />
+        <div class="col-12 row">
+            <label class="col-2 font-weight-bold">CheckBox List :</label>
+            <CheckBoxList Data="@EmployeeList"
+                          TextField="@((item)=>item.FullName)"
+                          ValueField="@((item)=>item.EmployeeId)"
+                          SelectedValues="@SelectedIds" />
+        </div>
+        <div class="col-12 row">
+            <label class="col-2 font-weight-bold">Selected Ids :</label>
+            <b>@OutPutValue</b>
+        </div>
+        <br />
+        <div class="col-12 row">
+            <span class="col-2"></span>
+            <button class="form-control col-1 btn btn-primary" @onclick="ShowSelectedValues">Show Checked Values</button>
+        </div>
+    </div>

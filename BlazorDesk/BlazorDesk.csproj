@@ -1,0 +1,19 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+  </PropertyGroup>
+  <ItemGroup>
+    <PackageReference Include="WebWindow" Version="0.1.0-20200807.1" />
+    <PackageReference Include="WebWindow.Blazor" Version="0.1.0-20200807.1" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\BlazorComponents\BlazorComponents.csproj" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Update="wwwroot\**">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+</Project>

@@ -13,10 +13,10 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <None Include="wwwroot\js\bootstrap.min.js" />
-    <None Include="wwwroot\js\jquery.min.js" />
-    <None Include="wwwroot\js\popper.min.js" />
-    <None Include="wwwroot\js\tether.min.js" />
+    <Compile Remove="wwwroot\**" />
+    <Content Remove="wwwroot\**" />
+    <EmbeddedResource Remove="wwwroot\**" />
+    <None Remove="wwwroot\**" />
   </ItemGroup>
 
   <ItemGroup>

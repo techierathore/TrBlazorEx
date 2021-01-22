@@ -1,0 +1,9 @@
+<Project>
+  <PropertyGroup>
+    <Authors>S Ravi Kumar</Authors>
+    <LangVersion>latest</LangVersion>
+    <TargetFramework>net5.0</TargetFramework>
+    <GenerateAssemblyInfo>true</GenerateAssemblyInfo>
+    <Copyright>© TechieRathore. All Rights Reserved</Copyright>
+  </PropertyGroup>
+</Project>

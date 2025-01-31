@@ -2,7 +2,7 @@
   <PropertyGroup>
     <Authors>S Ravi Kumar</Authors>
     <LangVersion>latest</LangVersion>
-    <TargetFramework>net6.0</TargetFramework>
+    <TargetFramework>net9.0</TargetFramework>
     <GenerateAssemblyInfo>true</GenerateAssemblyInfo>
     <Copyright>© TechieRathore. All Rights Reserved</Copyright>
   </PropertyGroup>
